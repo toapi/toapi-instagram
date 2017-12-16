@@ -5,5 +5,5 @@ www.toapi-instagram.com {
 }
 
 toapi-instagram.com {
-    redir http://www.toapi-instagram.net
+    redir http://www.toapi-instagram.com
 }
