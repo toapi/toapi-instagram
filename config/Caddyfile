@@ -1,0 +1,9 @@
+www.toapi-instagram.com {
+    proxy / 127.0.0.1:5000
+    timeouts none
+    gzip
+}
+
+toapi-instagram.com {
+    redir http://www.toapi-instagram.net
+}
