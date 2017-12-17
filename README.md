@@ -2,7 +2,7 @@
 
 ### What is toapi-instagram?
 
-This project uses [toapi](https://github.com/gaojiuli/toapi) to build a friendly API from instagram.
+This project uses [Toapi](https://github.com/gaojiuli/toapi) to build a friendly and robust API from instagram.
 
 
 ``` shell
