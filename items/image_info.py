@@ -12,6 +12,8 @@ class ImageInfo(Item):
     user_info_url = Css('head > meta[property="instapp:owner_user_id"]', attr='content')
 
     def clean_user_info_url(self, user_info_url):
+        if isinstance(user_info_url, list):
+            user_info_url = user_info_url[0]
         return "https://i.instagram.com/api/v1/users/{}/info/".format(user_info_url)
 
     class Meta:
