@@ -4,6 +4,7 @@ from toapi import Item, Css
 
 class ImageInfo(Item):
     __base_url__ = "https://www.instagram.com"
+
     image_url = Css('head > meta[property="og:image"]', attr='content')
     description = Css('head > meta[property="og:description"]', attr='content')
     source_url = Css('head > meta[property="og:url"]', attr='content')
@@ -15,7 +16,9 @@ class ImageInfo(Item):
 
     class Meta:
         source = None
-        route = '/p/.*?'
+        route = {
+            '/p/:path': '/p/:path'
+        }
 
         web = {
             "with_ajax": False

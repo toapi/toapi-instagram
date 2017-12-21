@@ -16,11 +16,15 @@ class User(Item):
         return ''.join(user_info_url) if isinstance(user_info_url, list) else user_info_url
 
     def clean_user_info_url(self, user_info_url):
-        return "https://i.instagram.com/api/v1/users/{}/info/".format(user_info_url[0])
+        if isinstance(user_info_url, list):
+            user_info_url = user_info_url[0]
+        return "https://i.instagram.com/api/v1/users/{}/info/".format(user_info_url)
 
     class Meta:
         source = None
-        route = '/(?!p/)'
+        route = {
+            '/user/:path': '/:path'
+        }
 
         web = {
             "with_ajax": True

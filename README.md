@@ -26,9 +26,11 @@ Once the server is started, you can get JSON data from toapi-instagram, now toap
 - user_info
 - media_info
 
-Visit `http://0.0.0.0:5000/items/`
+Visit `http://0.0.0.0:5000/user/howie6879`
 
 ![RUN](./docs/01.png)
+
+Visit `http://0.0.0.0:5000/p/BYkQ1u-lKFU`
 
 ![RUN](./docs/02.png)
 

@@ -10,4 +10,5 @@ api = Api(settings=MySettings)
 api.register(ImageInfo)
 api.register(User)
 
-api.serve(ip='0.0.0.0', port='5000')
+if __name__ == '__main__':
+    api.serve()
